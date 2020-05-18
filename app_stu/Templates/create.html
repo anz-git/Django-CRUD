@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+
 <body>
-    <form method="POST" action="/create" >{% csrf_token %}
-        <h2>Student registration</h2><br><br>
-        <label>Student id :</label>
-        {{form.student_id}} <br>
-        <label>Student First name:</label>
-        {{form.student_fname}} <br>
-        <label>Student last name:</label>
-        {{form.student_lname}} <br>
-        <label>Mark :</label>
-        {{form.mark}} <br>
-        <label>Mail Id :</label>
-        {{form.mail_id}} <br>
-        <label>Contact :</label>
-        {{form.contact}} <br>
-        <input type="submit" value = "submit">
-    </form>
+    <br><br>
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="card" style="width: 30em;">
+                <form method="POST" action="/create">{% csrf_token %}
+
+                    <div class="form-group">
+                        <label>Student id: </label>
+                        <input type="text" class = "form-control" name="student_id" id="std" maxlength="10">
+                    </div>
+                    <div class="form-group">
+                        <label>Student fname: </label>
+                        <input type="text" class = "form-control"  name="student_fname" id="fname" maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label>Student lname: </label>
+                        <input type="text"  class = "form-control" name="student_lname" id="lname" maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label>Mark :</label>
+                        <input type="text" class = "form-control"  name="mark" id="mark">
+                    </div>
+                    <div class="form-group">
+                        <label>Mail Id :</label>
+                        <input type="text" class = "form-control"  name="mail_id" id="mail">
+                    </div>
+                    <div class="form-group">
+                        <label>Contact :</label>
+                        <input type="text" class = "form-control"  name="contact" id="contact">
+                    </div>
+                    <input type="submit" class="btn btn-primary btn-block" value="Submit">
+
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
