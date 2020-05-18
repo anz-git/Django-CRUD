@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/update/{{student.id}}" method = "POST">{% csrf_token %}
+    <h1>Update details</h1>
+    <label>Student id: </label>
+    <input type="text" name ="student_id" id = "std" maxlength="10" value = "{{student.student_id}}">
+    <label>Student fname: </label>
+    <input type="text" name ="student_fname" id = "fname" maxlength="50" value = "{{student.student_fname}}">
+    <label>Student lname: </label>
+    <input type="text" name ="student_lname" id = "lname" maxlength="50" value = "{{student.student_lname}}">
+    <label >Mark :</label>
+    <input type="text" name = "mark" id ="mark" value = "{{student.mark}}" >
+    <label >Mail Id :</label>
+    <input type="text" name = "mail_id" id ="mail" value = "{{student.mail_id}}" >
+    <label >Contact</label>
+    <input type="text" name = "contact" id ="contact" value = "{{student.contact}}" >
+    <input type="submit" value="update">
+    </form>
+</body>
+</html>
